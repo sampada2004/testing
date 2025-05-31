@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function max()
+        {
+            var a=document.getElementById("fn").value;
+            var b=document.getElementById("sn").value;
+            if(a>b)
+        {
+            document.getElementById("res").innerText=a;
+        }
+        else{
+            document.getElementById("res").innerText=b;
+        }
+        }
+    </script>
+</head>
+<body>
+    fn:<input type="number" id="fn"/>
+    sn:<input type="number" id="sn"/>
+    <button onclick="max()">find max</button>
+    <p id="res"></p>
+</body>
+</html>

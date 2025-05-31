@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rev()
+        {
+            res="";
+            var ans=document.getElementById("inp").value;
+            for(let i=ans.length-1;i>=0;i--)
+            {
+                var char=ans[i];
+                res+=char;
+            }
+            document.getElementById("result").innerText=res;
+        }
+    </script>
+</head>
+<body>
+    <input type="text"id="inp"/>
+    <button onclick="rev()">reverse</button>
+    <p id="result"></p>
+</body>
+</html>

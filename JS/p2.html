@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Information Form</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var lastName = document.getElementById("lastName").value.trim();
+            var firstName = document.getElementById("firstName").value.trim();
+            var middleInitial = document.getElementById("middleInitial").value.trim();
+            var age = parseInt(document.getElementById("age").value, 10);
+            var weight = parseFloat(document.getElementById("weight").value);
+
+            if (lastName === "") {
+                alert("Last name is required.");
+                return false;
+            }
+
+            if (firstName === "") {
+                alert("First name is required.");
+                return false;
+            }
+
+            if (middleInitial === "" || middleInitial.length !== 1) {
+                alert("Middle initial must be a single character.");
+                return false;
+            }
+
+            if (isNaN(age) || age <= 17) {
+                alert("Age must be a number greater than 17.");
+                return false;
+            }
+
+            if (isNaN(weight) || weight < 45 || weight > 75) {
+                alert("Weight must be a number between 45 and 75.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    <form action="#" method="post" onsubmit="return validateForm();">
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" />
+        </p>
+        <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" />
+        </p>
+        <p>
+            <label for="middleInitial">Middle Initial:</label>
+            <input type="text" id="middleInitial" name="middleInitial" maxlength="1" />
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" />
+        </p>
+        <p>
+            <label for="weight">Weight (45–75):</label>
+            <input type="text" id="weight" name="weight" />
+        </p>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </form>
+</body>
+</html>

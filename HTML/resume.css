@@ -1,0 +1,40 @@
+body {
+    background-color: #f9f9f9;
+    color: #222;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 32px;
+}
+
+h1::after {
+    content: " ✦";
+    color: orange;
+}
+
+h2::before {
+    content: "➤ ";
+    color: teal;
+}
+
+.intro::first-line {
+    font-weight: bold;
+}
+
+.intro::first-letter {
+    font-size: 150%;
+    color: crimson;
+}
+
+.highlight {
+    background-color: #ffff99;
+    font-weight: bold;
+}
+
+.note {
+    font-style: italic;
+    color: #777;
+    font-size: 0.9em;
+}

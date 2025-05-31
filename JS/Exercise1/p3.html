@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkvowel()
+        {
+            var ch=document.getElementById("inp").value;
+            vowels="aeiouAEIOU";
+            if(vowels.includes(ch))
+        {
+            document.getElementById("res").innerText="true";
+        }
+        else
+        {
+            document.getElementById("res").innerText="false";
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="text"id="inp"/>
+    <button onclick="checkvowel()">Check vowel</button>
+    <p id="res"></p>
+</body>
+</html>
